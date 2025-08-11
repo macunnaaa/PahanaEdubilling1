@@ -17,19 +17,23 @@ public class AddCustomerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        
         String accountNumber = request.getParameter("accountNumber");
         String name = request.getParameter("name");
         String address = request.getParameter("address");
-        String telephoneNumber = request.getParameter("telephoneNumber");
+        String TelephoneNumber = request.getParameter("telephoneNumber");
+        
         
         Customer newCustomer = new Customer();
         newCustomer.setAccountNumber(accountNumber);
         newCustomer.setName(name);
         newCustomer.setAddress(address);
-        newCustomer.setTelephoneNumber(telephoneNumber);
+        newCustomer.setTelephoneNumber(TelephoneNumber);
+        
         
         CustomerDAO customerDAO = new CustomerDAO();
         customerDAO.addCustomer(newCustomer);
+        
         
         
         // suces notification code but not complte

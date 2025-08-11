@@ -158,22 +158,27 @@
                 <div class="card form-card">
                     <div class="card-body p-4 p-md-5">
                         <form action="addCustomer" method="post">
+                            
                             <div class="mb-3">
                                 <label for="accountNumber" class="form-label fw-bold">Account Number</label>
                                 <input type="text" id="accountNumber" name="accountNumber" class="form-control" required>
                             </div>
+                            
                             <div class="mb-3">
                                 <label for="name" class="form-label fw-bold">Full Name</label>
                                 <input type="text" id="name" name="name" class="form-control" required>
                             </div>
+                            
                             <div class="mb-3">
                                 <label for="address" class="form-label fw-bold">Address</label>
                                 <input type="text" id="address" name="address" class="form-control">
                             </div>
+                            
                             <div class="mb-4">
                                 <label for="telephoneNumber" class="form-label fw-bold">Telephone Number</label>
                                 <input type="text" id="telephoneNumber" name="telephoneNumber" class="form-control">
                             </div>
+                            
                             <div class="mt-4">
                                 <button type="submit" class="btn btn-primary shadow-sm"><i class="fas fa-save me-2"></i>Save Customer</button>
                                 <a href="listCustomers" class="btn btn-secondary shadow-sm">Cancel</a>

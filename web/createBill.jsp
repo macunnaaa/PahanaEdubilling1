@@ -69,7 +69,7 @@
         }
         @keyframes blinkAnimation { 50% { opacity: 0.6; } }
 
-        /*  Glass UI Styles  */
+        /* --- Glass UI Styles --- */
         .top-nav {
             position: sticky;
             top: 0;
@@ -130,8 +130,8 @@
             left: -150%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            animation: shine 4s infinite;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: shine 4s linear infinite;
         }
         @keyframes shine {
             0% { left: -150%; }
@@ -224,7 +224,7 @@
                             
                             <div class="d-flex justify-content-end align-items-center mt-3">
                                 <h3 class="me-4 mb-0">Grand Total: </h3>
-                                <h3><span id="grandTotal" class="fw-bold text-primary">$0.00</span></h3>
+                                <h3><span id="grandTotal" class="fw-bold text-primary">₨0.00</span></h3>
                             </div>
                             
                             <input type="hidden" id="finalItems" name="itemsData">
@@ -250,6 +250,15 @@
             let billItems = [];
 
             addItemBtn.addEventListener('click', function() {
+                
+                // customer Add first after select items 
+                
+                const customerSelect = document.getElementById('customerSelect');
+                if (!customerSelect.value) {
+                    alert('Please select a customer before adding items!');
+                    return;
+                }
+                
                 const itemSelect = document.getElementById('itemSelect');
                 const selectedOption = itemSelect.options[itemSelect.selectedIndex];
                 const quantityInput = document.getElementById('quantityInput');
@@ -286,12 +295,12 @@
                     qtyCell.className = 'text-center';
 
                     const priceCell = row.insertCell();
-                    priceCell.textContent = '$' + item.price.toFixed(2);
+                    priceCell.textContent = '₨' + item.price.toFixed(2);
                     priceCell.className = 'text-end';
 
                     const totalCell = row.insertCell();
                     const total = item.price * item.quantity;
-                    totalCell.textContent = '$' + total.toFixed(2);
+                    totalCell.textContent = '₨' + total.toFixed(2);
                     totalCell.className = 'text-end fw-bold';
 
                     const actionCell = row.insertCell();
@@ -310,7 +319,7 @@
             function updateFormAndTotals() {
                 let total = 0;
                 billItems.forEach(item => { total += item.price * item.quantity; });
-                grandTotalSpan.textContent = '$' + total.toFixed(2);
+                grandTotalSpan.textContent = '₨' + total.toFixed(2);
                 
                 const itemsData = billItems.map(item => `${item.id}:${item.quantity}`).join(',');
                 finalItemsInput.value = itemsData;

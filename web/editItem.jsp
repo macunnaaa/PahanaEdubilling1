@@ -143,7 +143,7 @@
                                 <input type="text" id="itemName" name="itemName" class="form-control" value="<%= item.getItemName() %>" required>
                             </div>
                             <div class="mb-4">
-                                <label for="price" class="form-label fw-bold">Price ($)</label>
+                                <label for="price" class="form-label fw-bold">Price (₨)</label>
                                 <input type="text" id="price" name="price" class="form-control" value="<%= String.format("%.2f", item.getPrice()) %>" required pattern="[0-9]+(\.[0-9]{1,2})?">
                             </div>
                             <div class="mt-4">

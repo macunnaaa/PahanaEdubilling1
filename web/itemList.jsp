@@ -206,7 +206,7 @@
                                             <p class="card-text item-code small"><%= item.getItemCode() %></p>
                                             
                                             <div class="mt-auto">
-                                                <h4 class="price-tag mb-3">$<%= String.format("%.2f", item.getPrice()) %></h4>
+                                                <h4 class="price-tag mb-3">₨<%= String.format("%.2f", item.getPrice()) %></h4>
                                                 <div class="card-actions d-flex justify-content-end">
                                                     <a href="editItem?id=<%= item.getId() %>" class="btn btn-warning btn-sm me-2">Edit</a>
                                                     <button type="button" class="btn btn-danger btn-sm" onclick="openDeleteModal('<%= item.getId() %>')">Delete</button>

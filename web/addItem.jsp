@@ -167,7 +167,7 @@
                                 <input type="text" id="itemName" name="itemName" class="form-control" required>
                             </div>
                             <div class="mb-4">
-                                <label for="price" class="form-label fw-bold">Price ($)</label>
+                                <label for="price" class="form-label fw-bold">Price(₨)</label>
                                 <input type="text" id="price" name="price" class="form-control" required pattern="[0-9]+(\.[0-9]{1,2})?" title="Enter a valid price (e.g., 150.50)">
                             </div>
                             <div class="mt-4">

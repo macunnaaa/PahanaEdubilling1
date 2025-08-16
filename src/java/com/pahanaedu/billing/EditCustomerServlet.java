@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 @WebServlet(name = "EditCustomerServlet", urlPatterns = {"/editCustomer"})
 public class EditCustomerServlet extends HttpServlet {
 
@@ -30,6 +31,6 @@ public class EditCustomerServlet extends HttpServlet {
         // Sending the request to the page editCustomer.jsp
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("editCustomer.jsp");
-        dispatcher.forward(request, response);
+        dispatcher.forward(request, response); 
     }
 }

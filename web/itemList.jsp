@@ -50,7 +50,6 @@
         }
         .sidebar-footer { font-size: 0.8rem; color: #6c757d; }
         
-        /*  Top Navigation Bar Style  */
         .top-nav {
             position: sticky;
             top: 0;
@@ -63,7 +62,6 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
-        /*  Glassmorphism Card Style  */
         .item-card {
             background: rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(12px);
@@ -80,7 +78,6 @@
             box-shadow: 0 10px 35px 0 rgba(31, 38, 135, 0.15);
         }
 
-        /*  Book Logo Placeholder Style  */
         .card-img-placeholder {
             background-color: rgba(0, 0, 0, 0.05);
             height: 160px;
@@ -108,7 +105,6 @@
             border-top: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        /*  Copyright Shine Animation  */
         .sidebar-footer p {
             position: relative;
             overflow: hidden;
@@ -130,7 +126,6 @@
             100% { left: 150%; }
         }
 
-        /*  General Animations & Other Styles  */
         @keyframes blinkAnimation { 50% { opacity: 0.6; } }
         .modal-icon { font-size: 3rem; color: #dc3545; animation: blinkWarning 1.5s infinite; }
         @keyframes blinkWarning {
@@ -151,7 +146,7 @@
             </div>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item mb-2"><a class="nav-link" href="listCustomers"><i class="fas fa-users"></i> Customers</a></li>
-                <li class="nav-item mb-2"><a class="nav-link active" href="listItems"><i class="fas fa-book"></i> Items</a></li>
+                <li class="nav-item mb-2"><a class="nav-link active" href="listItems"><i class="fas fa-graduation-cap"></i> Items</a></li>
                 <li class="nav-item mb-2"><a class="nav-link" href="prepareBill"><i class="fas fa-file-invoice"></i> Create Bill</a></li>
                 <li class="nav-item mb-2"><a class="nav-link" href="help.jsp"><i class="fas fa-question-circle"></i> Help</a></li>
             </ul>
@@ -199,7 +194,7 @@
                                 <div class="col-md-6 col-lg-3 mb-4 item-container">
                                     <div class="card h-100 item-card">
                                         <div class="card-img-placeholder d-flex align-items-center justify-content-center">
-                                            <i class="fas fa-book"></i>
+                                            <i class="fas fa-graduation-cap"></i>
                                         </div>
                                         <div class="card-body d-flex flex-column">
                                             <h5 class="card-title item-name"><%= item.getItemName() %></h5>
@@ -245,7 +240,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Search bar function
         document.getElementById('itemSearchInput').addEventListener('keyup', function() {
             let filter = this.value.toLowerCase();
             let items = document.querySelectorAll('#itemList .item-container');
@@ -261,7 +255,6 @@
             });
         });
 
-        // Modal JavaScript code
         var deleteModal = new bootstrap.Modal(document.getElementById('deleteConfirmModal'));
         var confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
 
